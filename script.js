@@ -1,5 +1,3 @@
-
-
 const pantalla = document.querySelector("#pantalla");
 const botones = document.querySelectorAll(".btn");
 
@@ -31,6 +29,16 @@ botones.forEach(boton => {
             return;
         }
 
+        if(boton.id ==="percent"){
+
+            if (pantalla.textContent === "0"){
+                pantalla.textContent = "0";
+            }else{
+                pantalla.textContent += "/100";
+            }
+            return;
+        }
+
 
         if(pantalla.textContent ==="0" || pantalla.textContent=== "Syntax Error"){
             pantalla.textContent = botonApretado;
@@ -41,5 +49,4 @@ botones.forEach(boton => {
     })
 
 })
-
 
